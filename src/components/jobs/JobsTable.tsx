@@ -205,13 +205,6 @@ const SkeletonRow: React.FC = () => (
 )
 
 export const JobsTable: React.FC<JobsTableProps> = ({ jobs, loading, onJobClick, onJobUpdate }) => {
-  // Debug: Log the jobs data to see what we're working with
-  React.useEffect(() => {
-    if (jobs && jobs.length > 0) {
-      console.log('JobsTable received jobs:', jobs[0])
-    }
-  }, [jobs])
-
   if (loading) {
     return (
       <div className="rounded-md border">
